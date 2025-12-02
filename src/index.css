@@ -1,0 +1,589 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Definition of the design system. All colors, gradients, fonts, etc should be defined here. 
+All colors MUST be HSL.
+*/
+
+@layer base {
+  :root {
+    /* Glassmorphic gradient theme color palette */
+    --background: 220 20% 3%; /* Deep dark background */
+    --foreground: 0 0% 100%; /* White text */
+
+    /* Glassmorphic primary colors with transparency */
+    --primary: 240 60% 45%; /* Dark purple */
+    --primary-foreground: 0 0% 100%;
+    --primary-glow: 240 60% 55%;
+    --primary-glass: 240 60% 45% / 0.1; /* Transparent primary */
+
+    /* Glassmorphic accent colors */
+    --accent: 220 70% 40%; /* Dark blue */
+    --accent-foreground: 0 0% 100%;
+    --accent-glow: 220 70% 50%;
+    --accent-glass: 220 70% 40% / 0.1; /* Transparent accent */
+
+    /* Supporting colors with glassmorphic transparency */
+    --secondary: 220 20% 8% / 0.3; /* Semi-transparent dark */
+    --secondary-foreground: 0 0% 100%;
+
+    --muted: 220 20% 12% / 0.4; /* Semi-transparent muted */
+    --muted-foreground: 220 9% 70%;
+
+    /* Glassmorphic card and surfaces */
+    --card: 220 20% 8% / 0.2; /* Very transparent cards */
+    --card-foreground: 0 0% 100%;
+    --card-dark: 220 20% 6% / 0.3; /* Slightly more opaque */
+    --card-glass: 220 20% 8% / 0.15; /* Ultra-transparent glass */
+
+    /* Interactive elements with glassmorphic effects */
+    --popover: 220 20% 8% / 0.2;
+    --popover-foreground: 0 0% 100%;
+    
+    --border: 220 20% 15% / 0.2; /* Subtle transparent borders */
+    --input: 220 20% 12% / 0.3;
+    --ring: 240 60% 45% / 0.5;
+
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 0 0% 98%;
+
+    /* Glassmorphic gradients */
+    --gradient-hero: linear-gradient(135deg, 
+      hsl(220 20% 3%) 0%, 
+      hsl(240 30% 8%) 25%, 
+      hsl(260 40% 12%) 50%, 
+      hsl(240 50% 15%) 75%, 
+      hsl(220 60% 18%) 100%);
+    
+    --gradient-glass: linear-gradient(135deg, 
+      hsl(220 20% 8% / 0.1) 0%, 
+      hsl(240 30% 12% / 0.15) 25%, 
+      hsl(260 40% 16% / 0.2) 50%, 
+      hsl(240 50% 20% / 0.15) 75%, 
+      hsl(220 60% 24% / 0.1) 100%);
+    
+    --gradient-spotlight: linear-gradient(135deg, 
+      hsl(240 60% 45% / 0.8) 0%, 
+      hsl(220 70% 40% / 0.8) 50%, 
+      hsl(260 60% 45% / 0.8) 100%);
+    
+    --gradient-curtain: linear-gradient(180deg, 
+      hsl(220 20% 6% / 0.3) 0%, 
+      hsl(240 30% 10% / 0.2) 50%, 
+      hsl(260 40% 14% / 0.1) 100%);
+    
+    --gradient-stage: linear-gradient(90deg, 
+      hsl(240 60% 45% / 0.05) 0%, 
+      hsl(220 70% 40% / 0.1) 50%, 
+      hsl(260 60% 45% / 0.05) 100%);
+    
+    --gradient-welcome: linear-gradient(135deg, 
+      hsl(240 60% 55%) 0%, 
+      hsl(220 70% 50%) 25%, 
+      hsl(260 60% 55%) 50%, 
+      hsl(280 50% 60%) 75%, 
+      hsl(300 40% 65%) 100%);
+
+    /* Glassmorphic shadows */
+    --shadow-glass: 0 8px 32px 0 hsl(220 20% 3% / 0.3);
+    --shadow-glass-inset: inset 0 1px 0 0 hsl(255 255% 255% / 0.1);
+    --shadow-spotlight: 0 20px 40px -10px hsl(240 60% 45% / 0.2);
+    --shadow-dramatic: 0 25px 50px -12px hsl(220 70% 40% / 0.15);
+    --shadow-soft: 0 4px 16px -4px hsl(220 20% 3% / 0.2);
+
+    /* Border radius for glassmorphic design */
+    --radius: 1rem;
+
+    --sidebar-background: 0 0% 98%;
+
+    --sidebar-foreground: 240 5.3% 26.1%;
+
+    --sidebar-primary: 240 5.9% 10%;
+
+    --sidebar-primary-foreground: 0 0% 98%;
+
+    --sidebar-accent: 240 4.8% 95.9%;
+
+    --sidebar-accent-foreground: 240 5.9% 10%;
+
+    --sidebar-border: 220 13% 91%;
+
+    --sidebar-ring: 217.2 91.2% 59.8%;
+  }
+
+  .dark {
+    /* Enhanced glassmorphic dark mode */
+    --background: 220 20% 3%;
+    --foreground: 0 0% 100%;
+
+    --card: 220 20% 8% / 0.2;
+    --card-foreground: 0 0% 100%;
+
+    --popover: 220 20% 8% / 0.2;
+    --popover-foreground: 0 0% 100%;
+
+    --primary: 240 60% 45%;
+    --primary-foreground: 0 0% 100%;
+
+    --secondary: 220 20% 8% / 0.3;
+    --secondary-foreground: 0 0% 100%;
+
+    --muted: 220 20% 12% / 0.4;
+    --muted-foreground: 220 9% 70%;
+
+    --accent: 220 70% 40%;
+    --accent-foreground: 0 0% 100%;
+
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 0 0% 98%;
+
+    --border: 220 20% 15% / 0.2;
+    --input: 220 20% 12% / 0.3;
+    --ring: 240 60% 45% / 0.5;
+    --sidebar-background: 220 20% 6% / 0.3;
+    --sidebar-foreground: 0 0% 100%;
+    --sidebar-primary: 240 60% 45%;
+    --sidebar-primary-foreground: 0 0% 100%;
+    --sidebar-accent: 220 20% 12% / 0.4;
+    --sidebar-accent-foreground: 0 0% 100%;
+    --sidebar-border: 220 20% 15% / 0.2;
+    --sidebar-ring: 240 60% 45% / 0.5;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground;
+  }
+}
+
+@layer components {
+  /* Glassmorphic gradient utility classes */
+  .gradient-hero {
+    background: var(--gradient-hero);
+  }
+  
+  .gradient-glass {
+    background: var(--gradient-glass);
+  }
+  
+  .gradient-spotlight {
+    background: var(--gradient-spotlight);
+  }
+  
+  .gradient-curtain {
+    background: var(--gradient-curtain);
+  }
+  
+  .gradient-stage {
+    background: var(--gradient-stage);
+  }
+  
+  .gradient-welcome {
+    background: var(--gradient-welcome);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+  
+  /* Glassmorphic shadows */
+  .shadow-glass {
+    box-shadow: var(--shadow-glass);
+  }
+  
+  .shadow-glass-inset {
+    box-shadow: var(--shadow-glass-inset);
+  }
+  
+  .shadow-spotlight {
+    box-shadow: var(--shadow-spotlight);
+  }
+  
+  .shadow-dramatic {
+    box-shadow: var(--shadow-dramatic);
+  }
+  
+  .shadow-soft {
+    box-shadow: var(--shadow-soft);
+  }
+  
+  /* Glassmorphic card effects */
+  .glass-card {
+    background: var(--card-glass);
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+    border: 1px solid var(--border);
+    box-shadow: var(--shadow-glass), var(--shadow-glass-inset);
+  }
+  
+  .glass-card-hover {
+    @apply glass-card transition-all duration-300 cursor-pointer;
+  }
+  
+  .glass-card-hover:hover {
+    transform: translateY(-4px);
+    background: var(--card);
+    box-shadow: var(--shadow-dramatic), var(--shadow-glass-inset);
+  }
+  
+  /* Glassmorphic navigation */
+  .glass-nav {
+    background: var(--card-glass);
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+    border-bottom: 1px solid var(--border);
+  }
+  
+  /* Glassmorphic buttons */
+  .btn-glass-primary {
+    @apply touch-target px-6 py-3 sm:px-8 sm:py-4 rounded-xl font-medium text-sm sm:text-base;
+    background: var(--gradient-spotlight);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border: 1px solid var(--border);
+    box-shadow: var(--shadow-glass), var(--shadow-glass-inset);
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  }
+  
+  .btn-glass-primary:hover {
+    transform: translateY(-2px);
+    box-shadow: var(--shadow-dramatic), var(--shadow-glass-inset);
+  }
+  
+  .btn-glass-secondary {
+    @apply touch-target px-6 py-3 sm:px-8 sm:py-4 rounded-xl font-medium text-sm sm:text-base;
+    background: var(--secondary);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border: 1px solid var(--border);
+    box-shadow: var(--shadow-glass), var(--shadow-glass-inset);
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  }
+  
+  .btn-glass-secondary:hover {
+    transform: translateY(-2px);
+    background: var(--muted);
+    box-shadow: var(--shadow-soft), var(--shadow-glass-inset);
+  }
+  
+  .btn-glass-ghost {
+    @apply touch-target px-4 py-2 rounded-xl font-medium text-sm sm:text-base;
+    background: var(--card-glass);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border: 1px solid var(--border);
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  }
+  
+  .btn-glass-ghost:hover {
+    background: var(--primary-glass);
+    border-color: var(--primary);
+  }
+  
+  /* Enhanced mobile-first responsive design */
+  .container-responsive {
+    @apply w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8;
+  }
+  
+  .section-padding {
+    @apply py-12 sm:py-16 md:py-20 lg:py-24;
+  }
+  
+  .text-responsive-xl {
+    @apply text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl;
+  }
+  
+  .text-responsive-lg {
+    @apply text-xl sm:text-2xl md:text-3xl lg:text-4xl;
+  }
+  
+  .text-responsive-md {
+    @apply text-lg sm:text-xl md:text-2xl;
+  }
+  
+  .text-responsive-sm {
+    @apply text-sm sm:text-base md:text-lg;
+  }
+  
+  /* Enhanced touch interactions for mobile */
+  .touch-target {
+    @apply min-h-[44px] min-w-[44px];
+  }
+  
+  .touch-friendly {
+    @apply touch-target p-3 sm:p-4;
+  }
+  
+  /* Glassmorphic text gradients */
+  .text-gradient-primary {
+    @apply bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent;
+  }
+  
+  .text-gradient-welcome {
+    @apply gradient-welcome;
+  }
+  
+  /* Glassmorphic Scriptly text effect for logo */
+  .text-glassmorphic-logo {
+    background: linear-gradient(135deg, 
+      hsl(240 60% 65%) 0%, 
+      hsl(220 70% 60%) 25%, 
+      hsl(260 60% 65%) 50%, 
+      hsl(280 50% 70%) 75%, 
+      hsl(300 40% 75%) 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    filter: drop-shadow(0 0 8px hsl(240 60% 45% / 0.4)) 
+            drop-shadow(0 0 16px hsl(220 70% 40% / 0.3));
+    text-shadow: 0 0 12px hsl(240 60% 45% / 0.5);
+  }
+  
+  /* Animated color-changing Scriptly text for headers */
+  .text-scriptly-animated {
+    background: linear-gradient(45deg, 
+      hsl(300 70% 65%) 0%, 
+      hsl(280 80% 60%) 20%, 
+      hsl(260 70% 65%) 40%, 
+      hsl(240 80% 60%) 60%, 
+      hsl(220 70% 65%) 80%, 
+      hsl(300 70% 65%) 100%);
+    background-size: 400% 400%;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    animation: scriptly-color-shift 8s ease-in-out infinite;
+  }
+  
+  /* Animated color-changing subtitle text for headers */
+  .text-subtitle-animated {
+    background: linear-gradient(45deg, 
+      hsl(200 70% 65%) 0%, 
+      hsl(220 80% 60%) 20%, 
+      hsl(240 70% 65%) 40%, 
+      hsl(260 80% 60%) 60%, 
+      hsl(280 70% 65%) 80%, 
+      hsl(200 70% 65%) 100%);
+    background-size: 400% 400%;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    animation: subtitle-color-shift 6s ease-in-out infinite;
+  }
+  
+  @keyframes scriptly-color-shift {
+    0% {
+      background-position: 0% 50%;
+    }
+    33% {
+      background-position: 50% 0%;
+    }
+    66% {
+      background-position: 100% 50%;
+    }
+    100% {
+      background-position: 0% 50%;
+    }
+  }
+  
+  @keyframes subtitle-color-shift {
+    0% {
+      background-position: 0% 50%;
+    }
+    25% {
+      background-position: 50% 0%;
+    }
+    50% {
+      background-position: 100% 50%;
+    }
+    75% {
+      background-position: 50% 100%;
+    }
+    100% {
+      background-position: 0% 50%;
+    }
+  }
+  
+  /* Consistent bounce hover effect for CTAs */
+  .cta-bounce {
+    transition: all 0.3s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+  }
+  
+  .cta-bounce:hover {
+    transform: translateY(-6px) scale(1.05);
+    animation: cta-bounce 0.8s ease-in-out infinite;
+  }
+  
+  @keyframes cta-bounce {
+    0% {
+      transform: translateY(-6px) scale(1.05);
+    }
+    50% {
+      transform: translateY(-8px) scale(1.05);
+    }
+    100% {
+      transform: translateY(-6px) scale(1.05);
+    }
+  }
+  
+  /* Color-changing gradient effect for Download App CTAs */
+  .cta-download-gradient {
+    background: linear-gradient(45deg, 
+      hsl(260 70% 60%) 0%, 
+      hsl(240 80% 55%) 25%, 
+      hsl(220 70% 60%) 50%, 
+      hsl(200 80% 55%) 75%, 
+      hsl(260 70% 60%) 100%);
+    background-size: 300% 300%;
+    animation: cta-gradient-shift 20s ease-in-out infinite;
+  }
+  
+  @keyframes cta-gradient-shift {
+    0% {
+      background-position: 0% 50%;
+    }
+    50% {
+      background-position: 100% 50%;
+    }
+    100% {
+      background-position: 0% 50%;
+    }
+  }
+  
+  /* Glassmorphic form elements */
+  .input-glass {
+    @apply w-full px-4 py-3 sm:px-5 sm:py-4 rounded-xl text-base;
+    background: var(--card-glass);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border: 1px solid var(--border);
+    box-shadow: var(--shadow-glass-inset);
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  }
+  
+  .input-glass:focus {
+    outline: none;
+    border-color: var(--primary);
+    box-shadow: 0 0 0 3px var(--ring), var(--shadow-glass-inset);
+  }
+  
+  /* Smooth scrolling for better mobile experience */
+  .smooth-scroll {
+    scroll-behavior: smooth;
+    -webkit-overflow-scrolling: touch;
+  }
+  
+  /* Mobile-optimized spacing */
+  .space-mobile {
+    @apply space-y-6 sm:space-y-8 md:space-y-12;
+  }
+  
+  .gap-mobile {
+    @apply gap-4 sm:gap-6 md:gap-8;
+  }
+  
+  /* Enhanced focus states for accessibility */
+  .focus-visible {
+    @apply focus:outline-none focus:ring-2 focus:ring-primary focus:ring-offset-2 focus:ring-offset-background;
+  }
+  
+  /* Glassmorphic backdrop effects */
+  .backdrop-glass {
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+  }
+  
+  .backdrop-glass-light {
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+  }
+}
+
+/* Scroll animations for Home page */
+.animate-on-scroll {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+}
+
+.animate-on-scroll.animate-visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.animate-slide-left {
+  opacity: 0;
+  transform: translateX(-50px);
+  transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+}
+
+.animate-slide-left.animate-visible {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+.animate-slide-right {
+  opacity: 0;
+  transform: translateX(50px);
+  transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+}
+
+.animate-slide-right.animate-visible {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+.animate-scale {
+  opacity: 0;
+  transform: scale(0.8);
+  transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+}
+
+.animate-scale.animate-visible {
+  opacity: 1;
+  transform: scale(1);
+}
+
+.animate-float {
+  animation: float-gentle 6s ease-in-out infinite;
+}
+
+@keyframes float-gentle {
+  0%, 100% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-15px);
+  }
+}
+
+.animate-float-mobile {
+  animation: float-gentle-mobile 4s ease-in-out infinite;
+}
+
+@keyframes float-gentle-mobile {
+  0%, 100% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-8px);
+  }
+}
+
+.animate-slide {
+  animation: slide-horizontal 8s ease-in-out infinite;
+}
+
+@keyframes slide-horizontal {
+  0%, 100% {
+    transform: translateX(0px);
+  }
+  50% {
+    transform: translateX(20px);
+  }
+}
