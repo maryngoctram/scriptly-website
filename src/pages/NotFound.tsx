@@ -30,7 +30,7 @@ const NotFound = () => {
             </div>
             <div className="flex gap-3 sm:gap-4">
               <a
-                href="https://instagram.com"
+                href="https://instagram.com/scriptlyapp"
                 target="_blank"
                 rel="noopener noreferrer"
                 aria-label="Follow us on Instagram"

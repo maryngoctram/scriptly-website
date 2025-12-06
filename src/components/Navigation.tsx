@@ -86,7 +86,7 @@ const Navigation = () => {
             {/* Social Media */}
             <div className="flex items-center space-x-4 ml-2 pl-4 border-l border-border/50">
               <a
-                href="https://instagram.com"
+                href="https://instagram.com/scriptlyapp"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="text-muted-foreground hover:text-primary transition-all duration-200 focus-visible"
@@ -177,7 +177,7 @@ const Navigation = () => {
                 <div className="flex items-center space-x-4">
                   <span className="text-sm font-medium text-muted-foreground">Follow Us</span>
                   <a
-                    href="https://instagram.com"
+                    href="https://instagram.com/scriptlyapp"
                     target="_blank"
                     rel="noopener noreferrer"
                     className="touch-target p-2 rounded-lg text-muted-foreground hover:text-primary hover:bg-muted/50 transition-colors focus-visible"
