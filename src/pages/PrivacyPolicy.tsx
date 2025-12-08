@@ -30,7 +30,7 @@ const PrivacyPolicy = () => {
             By using Scriptly, you agree to the practices described below.
           </p>
           <p className="animate-on-scroll text-xs sm:text-sm text-muted-foreground italic">
-            Last Updated: December 2025
+            Last Updated: December 8, 2025
           </p>
         </div>
       </section>
