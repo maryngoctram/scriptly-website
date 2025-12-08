@@ -47,12 +47,12 @@ const Hero = () => {
 
         {/* CTA Buttons */}
         <div className="animate-on-scroll flex flex-col sm:flex-row gap-4 justify-center">
-          <Button className="cta-bounce bg-gradient-to-r from-purple-600 to-blue-600 hover:from-purple-700 hover:to-blue-700 text-white font-medium px-8 py-4 rounded-xl shadow-lg shadow-purple-500/30 hover:shadow-purple-500/40 border border-purple-400/30">
-            <Download className="w-5 h-5 mr-2" />
+          <Button className="cta-bounce bg-gradient-to-r from-purple-600 to-blue-600 hover:from-purple-700 hover:to-blue-700 text-white font-medium px-4 py-2 sm:px-8 sm:py-4 text-sm sm:text-base rounded-xl shadow-lg shadow-purple-500/30 hover:shadow-purple-500/40 border border-purple-400/30">
+            <Download className="w-4 h-4 sm:w-5 sm:h-5 mr-2" />
             Download the App
           </Button>
-          <Button className="cta-bounce bg-gradient-to-r from-purple-600/20 to-blue-600/20 hover:from-purple-600/30 hover:to-blue-600/30 text-purple-100 font-medium px-8 py-4 rounded-xl backdrop-blur-xl border border-purple-400/30 shadow-lg shadow-purple-500/20 hover:shadow-purple-500/30">
-            <Play className="w-5 h-5 mr-2" />
+          <Button className="cta-bounce bg-gradient-to-r from-purple-600/20 to-blue-600/20 hover:from-purple-600/30 hover:to-blue-600/30 text-purple-100 font-medium px-4 py-2 sm:px-8 sm:py-4 text-sm sm:text-base rounded-xl backdrop-blur-xl border border-purple-400/30 shadow-lg shadow-purple-500/20 hover:shadow-purple-500/30">
+            <Play className="w-4 h-4 sm:w-5 sm:h-5 mr-2" />
             Watch Demo
           </Button>
         </div>

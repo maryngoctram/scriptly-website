@@ -24,10 +24,13 @@ const PrivacyPolicy = () => {
             </span>
           </h1>
           <p className="animate-on-scroll text-responsive-sm text-muted-foreground mb-8 sm:mb-12 max-w-2xl mx-auto leading-relaxed">
-            Your privacy is important to us. This policy explains how we collect, use, and protect your information.
+            Scriptly ("we," "our," or "us") is committed to protecting your privacy. This Privacy Policy explains what information we collect, how we use it, and your rights when using the Scriptly mobile app and website ("Services").
+          </p>
+          <p className="animate-on-scroll text-responsive-sm text-muted-foreground mb-8 sm:mb-12 max-w-2xl mx-auto leading-relaxed">
+            By using Scriptly, you agree to the practices described below.
           </p>
           <p className="animate-on-scroll text-xs sm:text-sm text-muted-foreground italic">
-            Last Updated: December 1, 2025
+            Last Updated: December 2025
           </p>
         </div>
       </section>
@@ -40,186 +43,192 @@ const PrivacyPolicy = () => {
               
               <div className="animate-on-scroll mb-8">
                 <h2 className="text-responsive-lg font-bold mb-4 text-foreground border-b border-purple-400/30 pb-2">
-                  Introduction
-                </h2>
-                <p className="mb-4 leading-relaxed">
-                  Scriptly ("we," "our," or "us") is committed to protecting your privacy. This Privacy Policy explains how we collect, use, disclose, and safeguard your information when you use our iOS mobile application ("App"). Please read this Privacy Policy carefully.
-                </p>
-                <p className="leading-relaxed">
-                  By using Scriptly, you agree to the collection and use of information in accordance with this policy.
-                </p>
-              </div>
-
-              <div className="animate-on-scroll mb-8">
-                <h2 className="text-responsive-lg font-bold mb-4 text-foreground border-b border-purple-400/30 pb-2">
                   1. Information We Collect
                 </h2>
+                <p className="mb-4 leading-relaxed">
+                  Scriptly is designed with privacy and on-device storage as core principles. We only collect the minimum information needed to provide app functionality.
+                </p>
+
+                <h3 className="text-lg font-semibold mb-3 text-foreground mt-6">1.1 Information You Provide</h3>
                 
-                <h3 className="text-lg font-semibold mb-3 text-foreground mt-6">1.1 Script Data (Stored Locally Only)</h3>
-                <p className="font-semibold mb-2">What We Collect:</p>
+                <p className="font-semibold mb-2">Script Content</p>
+                <p className="mb-3 leading-relaxed">
+                  When you upload or paste a script into Scriptly, the entire script is securely sent to our third-party AI processing provider (such as OpenAI) only to perform the features you request, including:
+                </p>
                 <ul className="list-disc list-inside mb-4 space-y-2 ml-4">
-                  <li>Script content (text, dialogue, stage directions)</li>
-                  <li>Script metadata (name, file size, file type, emoji)</li>
-                  <li>Character information</li>
-                  <li>Voice assignments</li>
-                  <li>Parsed script lines</li>
-                  <li>Scene information</li>
-                  <li>User notes and annotations</li>
-                  <li>Rehearsal session data</li>
+                  <li>Scene parsing</li>
+                  <li>Character detection</li>
+                  <li>Scene analysis</li>
+                  <li>Text-to-speech (TTS) generation</li>
                 </ul>
-                
-                <p className="font-semibold mb-2">How We Store It:</p>
-                <ul className="list-disc list-inside mb-4 space-y-2 ml-4">
-                  <li>✅ <strong>100% Local Storage</strong>: All script data is stored exclusively on your device using iOS UserDefaults and FileManager</li>
-                  <li>✅ <strong>Never Uploaded to Cloud</strong>: Your scripts never leave your device and are not stored on any server</li>
-                  <li>✅ <strong>iOS Data Protection</strong>: iOS automatically encrypts UserDefaults when your device is locked</li>
-                  <li>✅ <strong>No Cloud Backup</strong>: Scripts are not synced to iCloud or any cloud service</li>
-                </ul>
-                <p className="mb-4"><strong>Privacy Benefit:</strong> Your scripts are completely private and never accessible to us or any third party.</p>
-
-                <h3 className="text-lg font-semibold mb-3 text-foreground mt-6">1.2 Analytics Data (Optional, With Your Consent)</h3>
-                <p className="font-semibold mb-2">What We Collect (If You Consent):</p>
-                <ul className="list-disc list-inside mb-4 space-y-2 ml-4">
-                  <li>App usage statistics (features used, session duration)</li>
-                  <li>Performance metrics (app launch time, processing times)</li>
-                  <li>Feature usage patterns (which features you use most)</li>
-                  <li>Error rates and success rates</li>
-                </ul>
-                <p className="mb-4"><strong>Purpose:</strong> To understand how users interact with the app and improve the user experience.</p>
-
-                <h3 className="text-lg font-semibold mb-3 text-foreground mt-6">1.3 Crash Reports (Optional, With Your Consent)</h3>
-                <p className="font-semibold mb-2">What We Collect (If You Consent):</p>
-                <ul className="list-disc list-inside mb-4 space-y-2 ml-4">
-                  <li>Crash logs and error reports</li>
-                  <li>App state information at time of crash</li>
-                  <li>Device information (iOS version, device model)</li>
-                  <li>Performance metrics (memory usage, storage usage)</li>
-                </ul>
-                <p className="mb-4"><strong>Purpose:</strong> To identify and fix bugs, improve app stability and reliability.</p>
-
-                <h3 className="text-lg font-semibold mb-3 text-foreground mt-6">1.4 Data Sent for Processing (Temporary)</h3>
-                <p className="mb-2">When you use certain features, we temporarily send script content to our processing servers:</p>
-                <ul className="list-disc list-inside mb-4 space-y-2 ml-4">
-                  <li><strong>Script Parsing</strong>: Script content is sent to Supabase Edge Functions for AI-powered parsing (uses OpenAI GPT-4)</li>
-                  <li><strong>AI Insights</strong>: Script content and your questions are sent for AI-generated insights (uses OpenAI)</li>
-                  <li><strong>Text-to-Speech (TTS)</strong>: Script lines are sent for voice generation (uses OpenAI TTS)</li>
-                  <li><strong>Ask Scriptly</strong>: Your questions and script context are sent for AI responses (uses OpenAI)</li>
-                </ul>
-                <p className="font-semibold mb-2">Important Notes:</p>
-                <ul className="list-disc list-inside mb-4 space-y-2 ml-4">
-                  <li>⚠️ Script content is sent to third-party services (Supabase, OpenAI) for processing</li>
-                  <li>⚠️ Script content is NOT stored on our servers after processing</li>
-                  <li>⚠️ Script content may be cached temporarily by Supabase for performance (up to 30 days)</li>
-                  <li>✅ Processing is done server-side - your device never directly connects to OpenAI</li>
-                  <li>✅ Rate limiting is in place to prevent abuse and control costs</li>
+                <ul className="list-none mb-4 space-y-2 ml-4">
+                  <li>✅ <strong>We do not store or retain your scripts</strong> on our servers or in any cloud system.</li>
+                  <li>✅ <strong>Your script is transmitted only for the duration</strong> of the AI request</li>
+                  <li>✅ <strong>It is discarded immediately after processing</strong></li>
+                  <li>✅ <strong>All processed output is stored locally</strong> on your device</li>
+                  <li>✅ <strong>According to OpenAI's policies</strong>, your data is not used to train AI models</li>
                 </ul>
 
-                <h3 className="text-lg font-semibold mb-3 text-foreground mt-6">1.5 Information We Do NOT Collect</h3>
-                <p className="mb-2">We do NOT collect:</p>
+                <p className="font-semibold mb-2">Voice Input & Audio</p>
+                <p className="mb-4 leading-relaxed">
+                  If you rehearse lines or use TTS playback, audio is processed on your device or by a third-party TTS provider. Scriptly does not upload or store your audio files on any server.
+                </p>
+
+                <p className="font-semibold mb-2">Notes, Edits, and Saved Scenes</p>
+                <p className="mb-4 leading-relaxed">
+                  All annotations, highlights, edits, and scenes are stored locally on your device only. We do not upload or store this information.
+                </p>
+
+                <p className="font-semibold mb-2">Account & Subscription Information</p>
+                <p className="mb-4 leading-relaxed">
+                  If you create an account or purchase a subscription, we may collect minimal account information such as your email and subscription status. Payment details are handled entirely by Apple and are never accessible to us.
+                </p>
+
+                <h3 className="text-lg font-semibold mb-3 text-foreground mt-6">1.2 Automatically Collected Information</h3>
+                <p className="mb-3 leading-relaxed">
+                  We collect limited technical data needed to maintain and improve the app:
+                </p>
                 <ul className="list-disc list-inside mb-4 space-y-2 ml-4">
-                  <li>❌ Personal identification information (name, email, phone number)</li>
-                  <li>❌ Location data</li>
-                  <li>❌ Contacts or address book information</li>
-                  <li>❌ Photos or media files (except scripts you upload)</li>
-                  <li>❌ Payment information (handled by Apple App Store)</li>
-                  <li>❌ Biometric data</li>
-                  <li>❌ Device identifiers used for tracking across apps</li>
+                  <li>Device type and OS version</li>
+                  <li>App version</li>
+                  <li>Basic usage statistics</li>
+                  <li>Crash logs and diagnostics (collected by Apple or our analytics provider)</li>
                 </ul>
+                <p className="mb-4 leading-relaxed">
+                  We do not collect personally identifiable usage data beyond what is necessary for app functionality and troubleshooting.
+                </p>
               </div>
 
               <div className="animate-on-scroll mb-8">
                 <h2 className="text-responsive-lg font-bold mb-4 text-foreground border-b border-purple-400/30 pb-2">
                   2. How We Use Your Information
                 </h2>
-                <p className="mb-4 leading-relaxed">
-                  We use the information we collect to provide, maintain, and improve our services, process your requests, and ensure the security of our app.
+                <p className="mb-3 leading-relaxed">
+                  We use the information described above to:
                 </p>
-              </div>
-
-              <div className="animate-on-scroll mb-8">
-                <h2 className="text-responsive-lg font-bold mb-4 text-foreground border-b border-purple-400/30 pb-2">
-                  3. Data Storage and Security
-                </h2>
-                <p className="mb-4 leading-relaxed">
-                  All script data is stored locally on your device using iOS UserDefaults, encrypted by iOS Data Protection API when your device is locked. Script content sent for processing is not permanently stored on our servers.
-                </p>
-              </div>
-
-              <div className="animate-on-scroll mb-8">
-                <h2 className="text-responsive-lg font-bold mb-4 text-foreground border-b border-purple-400/30 pb-2">
-                  4. Data Sharing and Disclosure
-                </h2>
-                <p className="mb-4 leading-relaxed">
-                  We share data with third-party services (Supabase, OpenAI, Firebase) only for processing and analytics purposes. We do not sell your data. For more details, see the full privacy policy.
-                </p>
-              </div>
-
-              <div className="animate-on-scroll mb-8">
-                <h2 className="text-responsive-lg font-bold mb-4 text-foreground border-b border-purple-400/30 pb-2">
-                  5. Your Privacy Rights
-                </h2>
-                <p className="mb-4 leading-relaxed">
-                  You have full control over your local data. You can delete scripts at any time, disable analytics and crash reporting in Privacy Settings, and delete all data by deleting the app.
-                </p>
-              </div>
-
-              <div className="animate-on-scroll mb-8">
-                <h2 className="text-responsive-lg font-bold mb-4 text-foreground border-b border-purple-400/30 pb-2">
-                  6. Children's Privacy
-                </h2>
-                <p className="mb-4 leading-relaxed">
-                  Scriptly is not intended for children under the age of 13. We do not knowingly collect personal information from children under 13.
-                </p>
-              </div>
-
-              <div className="animate-on-scroll mb-8">
-                <h2 className="text-responsive-lg font-bold mb-4 text-foreground border-b border-purple-400/30 pb-2">
-                  7. Data Retention
-                </h2>
-                <p className="mb-4 leading-relaxed">
-                  Local data is stored on your device until you delete it. Server-side data (script content) is not permanently stored and is cached temporarily (up to 30 days).
-                </p>
-              </div>
-
-              <div className="animate-on-scroll mb-8">
-                <h2 className="text-responsive-lg font-bold mb-4 text-foreground border-b border-purple-400/30 pb-2">
-                  8. International Data Transfers
-                </h2>
-                <p className="mb-4 leading-relaxed">
-                  Your information may be transferred to and processed in countries other than your country of residence. By using Scriptly, you consent to these transfers.
-                </p>
-              </div>
-
-              <div className="animate-on-scroll mb-8">
-                <h2 className="text-responsive-lg font-bold mb-4 text-foreground border-b border-purple-400/30 pb-2">
-                  9. Changes to This Privacy Policy
-                </h2>
-                <p className="mb-4 leading-relaxed">
-                  We may update this Privacy Policy from time to time. We will notify you of any changes by posting the new Privacy Policy in the app and updating the "Last Updated" date.
-                </p>
-              </div>
-
-              <div className="animate-on-scroll mb-8">
-                <h2 className="text-responsive-lg font-bold mb-4 text-foreground border-b border-purple-400/30 pb-2">
-                  10. Contact Us
-                </h2>
-                <p className="mb-4 leading-relaxed">
-                  If you have any questions about this Privacy Policy or our data practices, please contact us at: <a href="mailto:scriptlyactingapp@gmail.com" className="text-purple-400 hover:text-purple-300 underline">scriptlyactingapp@gmail.com</a>
-                </p>
-              </div>
-
-              <div className="animate-on-scroll mt-8 p-6 bg-gradient-to-r from-purple-600/10 to-blue-600/10 rounded-xl border-l-4 border-purple-400/50">
-                <h3 className="text-lg font-semibold mb-4 text-foreground">Summary</h3>
-                <ul className="list-disc list-inside space-y-2 ml-4">
-                  <li>✅ <strong>Your scripts are stored 100% locally</strong> - never uploaded to cloud storage</li>
-                  <li>✅ <strong>Analytics and crash reporting are optional</strong> - you control them in Privacy Settings</li>
-                  <li>⚠️ <strong>Script content is sent to third-party services</strong> for AI processing (required for AI features)</li>
-                  <li>✅ <strong>No personal information is collected</strong></li>
-                  <li>✅ <strong>You can delete all data</strong> by deleting the app</li>
+                <ul className="list-disc list-inside mb-4 space-y-2 ml-4">
+                  <li>Provide core app features (script processing, scene parsing, character detection, scene analysis, TTS)</li>
+                  <li>Improve app performance, reliability, and user experience</li>
+                  <li>Provide customer support</li>
+                  <li>Manage subscriptions and prevent fraud</li>
+                  <li>Comply with legal requirements</li>
                 </ul>
-                <p className="mt-4 font-semibold text-foreground">
-                  Your privacy is important to us. We've designed Scriptly to keep your scripts private and secure.
+                <p className="mb-4 leading-relaxed">
+                  We do not sell or share your data for advertising purposes.
                 </p>
+              </div>
+
+              <div className="animate-on-scroll mb-8">
+                <h2 className="text-responsive-lg font-bold mb-4 text-foreground border-b border-purple-400/30 pb-2">
+                  3. How Your Information Is Stored and Protected
+                </h2>
+                <ul className="list-disc list-inside mb-4 space-y-2 ml-4">
+                  <li>Script content, notes, scenes, and audio are stored locally on your device</li>
+                  <li>We do not operate cloud storage for your personal content</li>
+                  <li>Third-party AI providers process data only temporarily and do not retain it</li>
+                  <li>We use industry-standard security measures for encrypted data transmission</li>
+                </ul>
+              </div>
+
+              <div className="animate-on-scroll mb-8">
+                <h2 className="text-responsive-lg font-bold mb-4 text-foreground border-b border-purple-400/30 pb-2">
+                  4. Sharing of Information
+                </h2>
+                <p className="mb-3 leading-relaxed">
+                  We only share information with:
+                </p>
+                
+                <p className="font-semibold mb-2">Service Providers</p>
+                <p className="mb-3 leading-relaxed">
+                  Trusted partners that process data solely to support app functionality:
+                </p>
+                <ul className="list-disc list-inside mb-4 space-y-2 ml-4">
+                  <li>OpenAI – script analysis and TTS processing</li>
+                  <li>Analytics providers – basic usage and crash reporting</li>
+                  <li>Apple / RevenueCat – subscription management</li>
+                </ul>
+                <p className="mb-4 leading-relaxed">
+                  These providers are contractually prohibited from selling or misusing your data.
+                </p>
+
+                <p className="font-semibold mb-2">Legal Requirements</p>
+                <p className="mb-4 leading-relaxed">
+                  We may disclose information if required by law, subpoena, or governmental request.
+                </p>
+                <p className="mb-4 leading-relaxed">
+                  We do not share data with advertisers or data brokers.
+                </p>
+              </div>
+
+              <div className="animate-on-scroll mb-8">
+                <h2 className="text-responsive-lg font-bold mb-4 text-foreground border-b border-purple-400/30 pb-2">
+                  5. Your Rights
+                </h2>
+                <p className="mb-3 leading-relaxed">
+                  Depending on your location, you may have certain rights regarding your personal information, including the right to:
+                </p>
+                <ul className="list-disc list-inside mb-4 space-y-2 ml-4">
+                  <li>Access the personal information we maintain</li>
+                  <li>Request deletion of the data we store or process</li>
+                  <li>Request correction</li>
+                  <li>Request a copy of your data</li>
+                  <li>Opt out of certain types of processing</li>
+                </ul>
+                <p className="mb-4 leading-relaxed">
+                  Because Scriptly stores most content locally on your device, some actions must be performed directly by you (such as deleting scripts, notes, or audio).
+                </p>
+                <p className="mb-4 leading-relaxed">
+                  For account-related or service-related requests, contact us at: <a href="mailto:scriptlyactingapp@gmail.com" className="text-purple-400 hover:text-purple-300 underline">scriptlyactingapp@gmail.com</a>
+                </p>
+                <p className="mb-4 leading-relaxed">
+                  We will respond within a reasonable time in accordance with applicable law.
+                </p>
+              </div>
+
+              <div className="animate-on-scroll mb-8">
+                <h2 className="text-responsive-lg font-bold mb-4 text-foreground border-b border-purple-400/30 pb-2">
+                  6. Data Retention
+                </h2>
+                <ul className="list-disc list-inside mb-4 space-y-2 ml-4">
+                  <li>Scriptly retains no script content on its servers</li>
+                  <li>All user-generated content remains on your device</li>
+                  <li>Third-party AI providers do not retain script data</li>
+                  <li>Account metadata (email, subscription status) is retained only as needed for service operation</li>
+                </ul>
+              </div>
+
+              <div className="animate-on-scroll mb-8">
+                <h2 className="text-responsive-lg font-bold mb-4 text-foreground border-b border-purple-400/30 pb-2">
+                  7. Children's Privacy
+                </h2>
+                <p className="mb-4 leading-relaxed">
+                  Scriptly is not intended for children under 13. We do not knowingly collect personal information from children under 13. If we become aware that a child under 13 has used Scriptly or provided personal information, we will delete that information as required by law.
+                </p>
+                <p className="mb-4 leading-relaxed">
+                  If you believe a child is using Scriptly without permission, contact us at: <a href="mailto:scriptlyactingapp@gmail.com" className="text-purple-400 hover:text-purple-300 underline">scriptlyactingapp@gmail.com</a>
+                </p>
+              </div>
+
+              <div className="animate-on-scroll mb-8">
+                <h2 className="text-responsive-lg font-bold mb-4 text-foreground border-b border-purple-400/30 pb-2">
+                  8. Changes to This Policy
+                </h2>
+                <p className="mb-4 leading-relaxed">
+                  We may update this Privacy Policy as our features evolve. If material changes occur, we will notify users in the app or on our website.
+                </p>
+              </div>
+
+              <div className="animate-on-scroll mb-8">
+                <h2 className="text-responsive-lg font-bold mb-4 text-foreground border-b border-purple-400/30 pb-2">
+                  9. Contact Us
+                </h2>
+                <p className="mb-4 leading-relaxed">
+                  If you have any questions about this Privacy Policy, contact us:
+                </p>
+                <ul className="list-none mb-4 space-y-2 ml-4">
+                  <li>📧 <a href="mailto:scriptlyactingapp@gmail.com" className="text-purple-400 hover:text-purple-300 underline">scriptlyactingapp@gmail.com</a></li>
+                  <li>🌐 <a href="https://www.scriptlyapp.com" className="text-purple-400 hover:text-purple-300 underline">https://www.scriptlyapp.com</a></li>
+                </ul>
               </div>
             </div>
           </Card>
