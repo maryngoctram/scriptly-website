@@ -99,11 +99,16 @@ const Navigation = () => {
 
           {/* CTA Button */}
           <div className="hidden md:flex items-center">
-            <Button className="cta-bounce bg-gradient-to-r from-purple-600 to-blue-600 hover:from-purple-700 hover:to-blue-700 text-white font-medium px-6 py-3 sm:px-8 sm:py-4 rounded-xl shadow-lg shadow-purple-500/30 hover:shadow-purple-500/40 border border-purple-400/30">
+            <a
+              href="https://apps.apple.com/us/app/scriptly-ai-acting-rehearsal/id6754227999"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="cta-bounce bg-gradient-to-r from-purple-600 to-blue-600 hover:from-purple-700 hover:to-blue-700 text-white font-medium px-6 py-3 sm:px-8 sm:py-4 rounded-xl shadow-lg shadow-purple-500/30 hover:shadow-purple-500/40 border border-purple-400/30 inline-flex items-center justify-center"
+            >
               <Download className="w-4 h-4 mr-2" />
-                  <span className="hidden lg:inline">Download the App</span>
+              <span className="hidden lg:inline">Download the App</span>
               <span className="lg:hidden">Download</span>
-            </Button>
+            </a>
           </div>
 
           {/* Mobile Menu Button */}

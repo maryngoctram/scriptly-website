@@ -119,9 +119,14 @@ const About = () => {
             Be part of the future of acting education. Get access to Scriptly and start your journey today.
           </p>
           <div className="animate-scale">
-            <Button className="cta-bounce bg-gradient-to-r from-purple-600 to-blue-600 hover:from-purple-700 hover:to-blue-700 text-white font-medium px-8 py-4 rounded-xl shadow-lg shadow-purple-500/30 hover:shadow-purple-500/40 border border-purple-400/30">
+            <a
+              href="https://apps.apple.com/us/app/scriptly-ai-acting-rehearsal/id6754227999"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="cta-bounce bg-gradient-to-r from-purple-600 to-blue-600 hover:from-purple-700 hover:to-blue-700 text-white font-medium px-8 py-4 rounded-xl shadow-lg shadow-purple-500/30 hover:shadow-purple-500/40 border border-purple-400/30 inline-flex items-center justify-center"
+            >
               Download the App
-            </Button>
+            </a>
           </div>
         </div>
       </section>

@@ -17,10 +17,15 @@ const Footer = () => {
             Be among the first to experience the future of acting training. 
             Get the Scriptly app in the App Store today.
           </p>
-          <Button className="cta-bounce bg-gradient-to-r from-purple-600 to-blue-600 hover:from-purple-700 hover:to-blue-700 text-white font-medium px-8 py-4 rounded-xl shadow-lg shadow-purple-500/30 hover:shadow-purple-500/40 border border-purple-400/30">
+          <a
+            href="https://apps.apple.com/us/app/scriptly-ai-acting-rehearsal/id6754227999"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="cta-bounce bg-gradient-to-r from-purple-600 to-blue-600 hover:from-purple-700 hover:to-blue-700 text-white font-medium px-8 py-4 rounded-xl shadow-lg shadow-purple-500/30 hover:shadow-purple-500/40 border border-purple-400/30 inline-flex items-center justify-center"
+          >
             <Mail className="w-5 h-5 mr-2" />
             Download the App
-          </Button>
+          </a>
         </div>
 
         <div className="border-t border-purple-400/20 pt-6 sm:pt-8">
