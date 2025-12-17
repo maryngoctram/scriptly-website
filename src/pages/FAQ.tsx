@@ -32,7 +32,7 @@ const FAQ = () => {
     },
     {
       question: "How much will Scriptly cost?",
-      answer: "Scriptly will offer an initial 3-day free trial. The pricing model for the app will be a monthly subscription paid in the app store."
+      answer: "Scriptly will offer an initial 7-day free trial. The pricing model for the app will be a monthly subscription of $14.99/month paid in the app store."
     },
     {
       question: "Can I use Scriptly offline?",
@@ -57,9 +57,107 @@ const FAQ = () => {
         </div>
       </section>
 
-      {/* FAQ Section */}
+      {/* How to Use Section */}
       <section className="section-padding bg-background">
         <div className="container-responsive max-w-4xl">
+          <h2 className="text-responsive-lg font-bold mb-8 text-foreground text-center">
+            Access Features in Scriptly
+          </h2>
+          
+          <div className="space-y-8">
+            {/* Step 1 */}
+            <div className="animate-on-scroll">
+              <div className="flex items-start gap-4 mb-4">
+                <div className="w-8 h-8 bg-gradient-to-r from-purple-600 to-blue-600 rounded-full flex items-center justify-center flex-shrink-0">
+                  <span className="text-white font-bold">1</span>
+                </div>
+                <div className="flex-1">
+                  <h3 className="text-lg font-semibold text-purple-100 mb-2">Upload Your Script</h3>
+                  <p className="text-purple-200 mb-4">Upload your script file to the app. Scriptly supports various file formats including PDF, DOCX, and plain text files.</p>
+                  <div className="bg-gradient-to-r from-purple-600/10 to-blue-600/10 rounded-lg p-4 border border-purple-400/20">
+                    <img 
+                      src="/ask-scriptly-screenshot.png" 
+                      alt="Ask Scriptly feature screenshot showing script with AI assistant overlay" 
+                      className="w-full max-w-md mx-auto rounded-lg shadow-lg"
+                    />
+                    <p className="text-xs text-purple-300 text-center mt-2 italic">Screenshot: Ask Scriptly feature interface</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            {/* Step 2 */}
+            <div className="animate-on-scroll">
+              <div className="flex items-start gap-4 mb-4">
+                <div className="w-8 h-8 bg-gradient-to-r from-purple-600 to-blue-600 rounded-full flex items-center justify-center flex-shrink-0">
+                  <span className="text-white font-bold">2</span>
+                </div>
+                <div className="flex-1">
+                  <h3 className="text-lg font-semibold text-purple-100 mb-2">Wait for Processing</h3>
+                  <p className="text-purple-200 mb-4">Scriptly's AI will automatically parse your script, identify characters, and break down scenes. This usually takes just a few moments.</p>
+                  <div className="bg-gradient-to-r from-purple-600/10 to-blue-600/10 rounded-lg p-4 border border-purple-400/20">
+                    <img 
+                      src="/placeholder.svg" 
+                      alt="Processing script screenshot" 
+                      className="w-full max-w-md mx-auto rounded-lg"
+                    />
+                    <p className="text-xs text-purple-300 text-center mt-2 italic">Screenshot: Script processing screen</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            {/* Step 3 */}
+            <div className="animate-on-scroll">
+              <div className="flex items-start gap-4 mb-4">
+                <div className="w-8 h-8 bg-gradient-to-r from-purple-600 to-blue-600 rounded-full flex items-center justify-center flex-shrink-0">
+                  <span className="text-white font-bold">3</span>
+                </div>
+                <div className="flex-1">
+                  <h3 className="text-lg font-semibold text-purple-100 mb-2">Start Rehearsing</h3>
+                  <p className="text-purple-200 mb-4">Select your character and begin rehearsing your lines. Use the interactive rehearsal mode to practice with an AI scene partner, or use text-to-speech to hear your lines.</p>
+                  <div className="bg-gradient-to-r from-purple-600/10 to-blue-600/10 rounded-lg p-4 border border-purple-400/20">
+                    <img 
+                      src="/placeholder.svg" 
+                      alt="Rehearsal mode screenshot" 
+                      className="w-full max-w-md mx-auto rounded-lg"
+                    />
+                    <p className="text-xs text-purple-300 text-center mt-2 italic">Screenshot: Rehearsal interface</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            {/* Step 4 */}
+            <div className="animate-on-scroll">
+              <div className="flex items-start gap-4 mb-4">
+                <div className="w-8 h-8 bg-gradient-to-r from-purple-600 to-blue-600 rounded-full flex items-center justify-center flex-shrink-0">
+                  <span className="text-white font-bold">4</span>
+                </div>
+                <div className="flex-1">
+                  <h3 className="text-lg font-semibold text-purple-100 mb-2">Explore AI Features</h3>
+                  <p className="text-purple-200 mb-4">Dive into AI-powered insights to understand your character better, analyze scenes, and get personalized feedback to improve your performance.</p>
+                  <div className="bg-gradient-to-r from-purple-600/10 to-blue-600/10 rounded-lg p-4 border border-purple-400/20">
+                    <img 
+                      src="/placeholder.svg" 
+                      alt="AI insights screenshot" 
+                      className="w-full max-w-md mx-auto rounded-lg"
+                    />
+                    <p className="text-xs text-purple-300 text-center mt-2 italic">Screenshot: AI insights and analysis</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* FAQ Section */}
+      <section className="section-padding bg-gradient-to-r from-purple-600/5 to-blue-600/5">
+        <div className="container-responsive max-w-4xl">
+          <h2 className="text-responsive-lg font-bold mb-8 text-foreground text-center">
+            Frequently Asked Questions
+          </h2>
           <Accordion type="single" collapsible className="space-y-4">
             {faqs.map((faq, index) => (
               <AccordionItem key={index} value={`item-${index}`} className={`bg-gradient-to-r from-purple-600/10 to-blue-600/10 backdrop-blur-xl border border-purple-400/20 rounded-xl px-4 sm:px-6 shadow-lg shadow-purple-500/10 hover:shadow-purple-500/20 transition-all duration-300 ${index % 2 === 0 ? 'animate-slide-left' : 'animate-slide-right'}`}>
