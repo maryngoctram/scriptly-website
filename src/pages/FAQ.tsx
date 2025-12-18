@@ -72,8 +72,8 @@ const FAQ = () => {
                   <span className="text-white font-bold">1</span>
                 </div>
                 <div className="flex-1">
-                  <h3 className="text-lg font-semibold text-purple-100 mb-2">Upload Your Script</h3>
-                  <p className="text-purple-200 mb-4">Upload your script file to the app. Scriptly supports various file formats including PDF, DOCX, and plain text files.</p>
+                  <h3 className="text-lg font-semibold text-purple-100 mb-2">Ask Scriptly in Rehearsal Mode</h3>
+                  <p className="text-purple-200 mb-4">Long press any line to access Ask Scriptly. The Ask Scriptly feature allows you to choose where you want to start practicing, use AI insights to analyze the line, and provides you with questions that helps you reflect on the line.</p>
                   <div className="bg-gradient-to-r from-purple-600/10 to-blue-600/10 rounded-lg p-4 border border-purple-400/20">
                     <img 
                       src="/ask-scriptly-screenshot.png" 
@@ -93,57 +93,15 @@ const FAQ = () => {
                   <span className="text-white font-bold">2</span>
                 </div>
                 <div className="flex-1">
-                  <h3 className="text-lg font-semibold text-purple-100 mb-2">Wait for Processing</h3>
-                  <p className="text-purple-200 mb-4">Scriptly's AI will automatically parse your script, identify characters, and break down scenes. This usually takes just a few moments.</p>
+                  <h3 className="text-lg font-semibold text-purple-100 mb-2">The Ellipsis Menu in Rehearsal Mode</h3>
+                  <p className="text-purple-200 mb-4">Tap the Ellipsis menu on the upper right hand corner in rehearsal mode to access menu settings. You can change the character you're rehearsing, change the voices for the scene, change where you can start and end practice lines, edit the script and its lines, hide stage directions, and toggle auto-loop on and off.</p>
                   <div className="bg-gradient-to-r from-purple-600/10 to-blue-600/10 rounded-lg p-4 border border-purple-400/20">
                     <img 
-                      src="/placeholder.svg" 
-                      alt="Processing script screenshot" 
-                      className="w-full max-w-md mx-auto rounded-lg"
+                      src="/three-dot-menu.png" 
+                      alt="Ellipsis menu in rehearsal mode screenshot" 
+                      className="w-full max-w-md mx-auto rounded-lg shadow-lg"
                     />
-                    <p className="text-xs text-purple-300 text-center mt-2 italic">Screenshot: Script processing screen</p>
-                  </div>
-                </div>
-              </div>
-            </div>
-
-            {/* Step 3 */}
-            <div className="animate-on-scroll">
-              <div className="flex items-start gap-4 mb-4">
-                <div className="w-8 h-8 bg-gradient-to-r from-purple-600 to-blue-600 rounded-full flex items-center justify-center flex-shrink-0">
-                  <span className="text-white font-bold">3</span>
-                </div>
-                <div className="flex-1">
-                  <h3 className="text-lg font-semibold text-purple-100 mb-2">Start Rehearsing</h3>
-                  <p className="text-purple-200 mb-4">Select your character and begin rehearsing your lines. Use the interactive rehearsal mode to practice with an AI scene partner, or use text-to-speech to hear your lines.</p>
-                  <div className="bg-gradient-to-r from-purple-600/10 to-blue-600/10 rounded-lg p-4 border border-purple-400/20">
-                    <img 
-                      src="/placeholder.svg" 
-                      alt="Rehearsal mode screenshot" 
-                      className="w-full max-w-md mx-auto rounded-lg"
-                    />
-                    <p className="text-xs text-purple-300 text-center mt-2 italic">Screenshot: Rehearsal interface</p>
-                  </div>
-                </div>
-              </div>
-            </div>
-
-            {/* Step 4 */}
-            <div className="animate-on-scroll">
-              <div className="flex items-start gap-4 mb-4">
-                <div className="w-8 h-8 bg-gradient-to-r from-purple-600 to-blue-600 rounded-full flex items-center justify-center flex-shrink-0">
-                  <span className="text-white font-bold">4</span>
-                </div>
-                <div className="flex-1">
-                  <h3 className="text-lg font-semibold text-purple-100 mb-2">Explore AI Features</h3>
-                  <p className="text-purple-200 mb-4">Dive into AI-powered insights to understand your character better, analyze scenes, and get personalized feedback to improve your performance.</p>
-                  <div className="bg-gradient-to-r from-purple-600/10 to-blue-600/10 rounded-lg p-4 border border-purple-400/20">
-                    <img 
-                      src="/placeholder.svg" 
-                      alt="AI insights screenshot" 
-                      className="w-full max-w-md mx-auto rounded-lg"
-                    />
-                    <p className="text-xs text-purple-300 text-center mt-2 italic">Screenshot: AI insights and analysis</p>
+                    <p className="text-xs text-purple-300 text-center mt-2 italic">Screenshot: Ellipsis menu interface</p>
                   </div>
                 </div>
               </div>
