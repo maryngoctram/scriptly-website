@@ -1,4 +1,3 @@
-import { useState, useRef, useEffect } from "react";
 import { Button } from "@/components/ui/button";
 import {
   Dialog,
@@ -6,16 +5,11 @@ import {
   DialogTitle,
 } from "@/components/ui/dialog";
 import { Play, Download, Star } from "lucide-react";
+import { useEffect, useRef, useState } from "react";
 
 const Hero = () => {
   const [demoOpen, setDemoOpen] = useState(false);
   const videoRef = useRef<HTMLVideoElement>(null);
-
-  useEffect(() => {
-    if (!demoOpen && videoRef.current) {
-      videoRef.current.pause();
-    }
-  }, [demoOpen]);
 
   useEffect(() => {
     // Initialize scroll animations
@@ -77,24 +71,35 @@ const Hero = () => {
             <Play className="w-4 h-4 sm:w-5 sm:h-5 mr-2" />
             Watch Demo
           </Button>
+          <Dialog
+            open={demoOpen}
+            onOpenChange={(open) => {
+              setDemoOpen(open);
+              if (!open) {
+                const video = videoRef.current;
+                if (video) {
+                  video.pause();
+                  video.currentTime = 0;
+                }
+              }
+            }}
+          >
+            <DialogContent className="max-w-4xl w-[95vw] p-2 sm:p-4">
+              <DialogTitle className="sr-only">
+                Scriptly Walkthrough Demo
+              </DialogTitle>
+              <video
+                ref={videoRef}
+                src="/scriptly-demo.mov"
+                controls
+                autoPlay
+                playsInline
+                className="w-full max-w-full aspect-video rounded-lg bg-black"
+              />
+            </DialogContent>
+          </Dialog>
         </div>
       </div>
-
-      <Dialog open={demoOpen} onOpenChange={setDemoOpen}>
-        <DialogContent className="max-w-4xl p-0 gap-0 overflow-hidden border-0 bg-black">
-          <DialogTitle className="sr-only">Scriptly walkthrough demo</DialogTitle>
-          <video
-            ref={videoRef}
-            src="/scriptly-demo.mov"
-            controls
-            autoPlay
-            playsInline
-            className="w-full aspect-video"
-          >
-            Your browser does not support the video tag.
-          </video>
-        </DialogContent>
-      </Dialog>
     </section>
   );
 };
