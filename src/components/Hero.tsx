@@ -1,8 +1,22 @@
+import { useState, useRef, useEffect } from "react";
 import { Button } from "@/components/ui/button";
+import {
+  Dialog,
+  DialogContent,
+  DialogTitle,
+} from "@/components/ui/dialog";
 import { Play, Download, Star } from "lucide-react";
-import { useEffect } from "react";
 
 const Hero = () => {
+  const [demoOpen, setDemoOpen] = useState(false);
+  const videoRef = useRef<HTMLVideoElement>(null);
+
+  useEffect(() => {
+    if (!demoOpen && videoRef.current) {
+      videoRef.current.pause();
+    }
+  }, [demoOpen]);
+
   useEffect(() => {
     // Initialize scroll animations
     import('../utils/scrollAnimations').then(({ startScrollAnimations }) => {
@@ -56,12 +70,31 @@ const Hero = () => {
             <Download className="w-4 h-4 sm:w-5 sm:h-5 mr-2" />
             Download the App
           </a>
-          <Button className="cta-bounce bg-gradient-to-r from-purple-600/20 to-blue-600/20 hover:from-purple-600/30 hover:to-blue-600/30 text-purple-100 font-medium px-4 py-2 sm:px-8 sm:py-4 text-sm sm:text-base rounded-xl backdrop-blur-xl border border-purple-400/30 shadow-lg shadow-purple-500/20 hover:shadow-purple-500/30 h-auto">
+          <Button
+            onClick={() => setDemoOpen(true)}
+            className="cta-bounce bg-gradient-to-r from-purple-600/20 to-blue-600/20 hover:from-purple-600/30 hover:to-blue-600/30 text-purple-100 font-medium px-4 py-2 sm:px-8 sm:py-4 text-sm sm:text-base rounded-xl backdrop-blur-xl border border-purple-400/30 shadow-lg shadow-purple-500/20 hover:shadow-purple-500/30 h-auto"
+          >
             <Play className="w-4 h-4 sm:w-5 sm:h-5 mr-2" />
             Watch Demo
           </Button>
         </div>
       </div>
+
+      <Dialog open={demoOpen} onOpenChange={setDemoOpen}>
+        <DialogContent className="max-w-4xl p-0 gap-0 overflow-hidden border-0 bg-black">
+          <DialogTitle className="sr-only">Scriptly walkthrough demo</DialogTitle>
+          <video
+            ref={videoRef}
+            src="/scriptly-demo.mov"
+            controls
+            autoPlay
+            playsInline
+            className="w-full aspect-video"
+          >
+            Your browser does not support the video tag.
+          </video>
+        </DialogContent>
+      </Dialog>
     </section>
   );
 };
