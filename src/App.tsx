@@ -19,9 +19,11 @@ const RouteTracker = () => {
   const location = useLocation();
   
   useEffect(() => {
-    // #region agent log
-    fetch('http://127.0.0.1:7242/ingest/8e0415ed-d1b2-4aed-b2a0-78cf86b3b718',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({location:'App.tsx:18',message:'Route changed',data:{pathname:location.pathname,url:window.location.href},timestamp:Date.now(),runId:'run1',hypothesisId:'E'})}).catch(()=>{});
-    // #endregion
+    if (typeof window.gtag === 'function') {
+      window.gtag('config', 'G-K95BKSX6HE', {
+        page_path: location.pathname,
+      });
+    }
   }, [location]);
   
   return null;
