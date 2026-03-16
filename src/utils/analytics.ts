@@ -18,3 +18,9 @@ export function trackDownloadApp(location: string) {
     event_label: location,
   });
 }
+
+export function trackWatchDemo() {
+  track('watch_demo', {
+    event_category: 'engagement',
+  });
+}
