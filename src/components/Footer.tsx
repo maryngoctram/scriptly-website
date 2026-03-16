@@ -1,6 +1,7 @@
 import { Button } from "@/components/ui/button";
 import { Mail, Instagram } from "lucide-react";
 import { Link } from "react-router-dom";
+import DownloadCTA from "@/components/DownloadCTA";
 
 const Footer = () => {
   return (
@@ -17,15 +18,7 @@ const Footer = () => {
             Be among the first to experience the future of acting training. 
             Get the Scriptly app in the App Store today.
           </p>
-          <a
-            href="https://apps.apple.com/us/app/scriptly-ai-acting-rehearsal/id6754227999"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="cta-bounce bg-gradient-to-r from-purple-600 to-blue-600 hover:from-purple-700 hover:to-blue-700 text-white font-medium px-4 py-2 sm:px-8 sm:py-4 text-sm sm:text-base rounded-xl shadow-lg shadow-purple-500/30 hover:shadow-purple-500/40 border border-purple-400/30 inline-flex items-center justify-center h-auto"
-          >
-            <Mail className="w-4 h-4 sm:w-5 sm:h-5 mr-2" />
-            Download the App
-          </a>
+          <DownloadCTA location="footer" icon={<Mail className="w-4 h-4 sm:w-5 sm:h-5 mr-2" />} />
         </div>
 
         <div className="border-t border-purple-400/20 pt-6 sm:pt-8">

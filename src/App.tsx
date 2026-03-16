@@ -12,6 +12,7 @@ import TermsOfService from "./pages/TermsOfService";
 import Feedback from "./pages/Feedback";
 import NotFound from "./pages/NotFound";
 import { useEffect } from "react";
+import { trackPageview } from "@/utils/analytics";
 
 const queryClient = new QueryClient();
 
@@ -19,11 +20,7 @@ const RouteTracker = () => {
   const location = useLocation();
   
   useEffect(() => {
-    if (typeof window.gtag === 'function') {
-      window.gtag('config', 'G-K95BKSX6HE', {
-        page_path: location.pathname,
-      });
-    }
+    trackPageview(location.pathname);
   }, [location]);
   
   return null;
