@@ -7,6 +7,7 @@ import { Button } from "@/components/ui/button";
 import { Instagram, Send } from "lucide-react";
 import { Link } from "react-router-dom";
 import { toast } from "sonner";
+import { trackSendFeedback } from "@/utils/analytics";
 
 const Feedback = () => {
   const [name, setName] = useState("");
@@ -41,6 +42,7 @@ const Feedback = () => {
       const data = await response.json();
 
       if (data.success) {
+        trackSendFeedback();
         toast.success("Thank you for your feedback!", {
           description: "We appreciate you taking the time to share your thoughts.",
         });

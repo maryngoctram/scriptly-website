@@ -24,3 +24,9 @@ export function trackWatchDemo() {
     event_category: 'engagement',
   });
 }
+
+export function trackSendFeedback() {
+  track('send_feedback', {
+    event_category: 'engagement',
+  });
+}
