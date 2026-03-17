@@ -3,6 +3,7 @@ import { Link, useLocation } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import { Menu, X, Instagram } from "lucide-react";
 import DownloadCTA from "@/components/DownloadCTA";
+import TikTokIcon from "@/components/icons/TikTokIcon";
 
 const Navigation = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -96,6 +97,15 @@ const Navigation = () => {
               >
                 <Instagram className="w-5 h-5" />
               </a>
+              <a
+                href="https://www.tiktok.com/@scriptlyactingapp"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-muted-foreground hover:text-primary transition-all duration-200 focus-visible"
+                aria-label="Follow us on TikTok"
+              >
+                <TikTokIcon className="w-5 h-5" />
+              </a>
             </div>
           </div>
 
@@ -183,6 +193,16 @@ const Navigation = () => {
                     onClick={() => setIsOpen(false)}
                   >
                     <Instagram className="w-5 h-5" />
+                  </a>
+                  <a
+                    href="https://www.tiktok.com/@scriptlyactingapp"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="touch-target p-2 rounded-lg text-muted-foreground hover:text-primary hover:bg-muted/50 transition-colors focus-visible"
+                    aria-label="Follow us on TikTok"
+                    onClick={() => setIsOpen(false)}
+                  >
+                    <TikTokIcon className="w-5 h-5" />
                   </a>
                 </div>
               </div>

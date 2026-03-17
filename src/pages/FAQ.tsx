@@ -5,6 +5,7 @@ import { HelpCircle, Mail, Instagram } from "lucide-react";
 import { useEffect } from "react";
 import { Link } from "react-router-dom";
 import DownloadCTA from "@/components/DownloadCTA";
+import TikTokIcon from "@/components/icons/TikTokIcon";
 
 const FAQ = () => {
   useEffect(() => {
@@ -202,6 +203,16 @@ const FAQ = () => {
               >
                 <Button variant="ghost" size="icon" className="touch-target text-purple-200 hover:text-purple-100 hover:bg-purple-500/20 border border-purple-400/30">
                   <Instagram className="w-5 h-5" />
+                </Button>
+              </a>
+              <a
+                href="https://www.tiktok.com/@scriptlyactingapp"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="Follow us on TikTok"
+              >
+                <Button variant="ghost" size="icon" className="touch-target text-purple-200 hover:text-purple-100 hover:bg-purple-500/20 border border-purple-400/30">
+                  <TikTokIcon className="w-5 h-5" />
                 </Button>
               </a>
             </div>
