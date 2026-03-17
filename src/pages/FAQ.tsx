@@ -59,59 +59,6 @@ const FAQ = () => {
         </div>
       </section>
 
-      {/* How to Use Section */}
-      <section className="section-padding bg-background">
-        <div className="container-responsive max-w-4xl">
-          <h2 className="text-responsive-lg font-bold mb-8 text-foreground text-center">
-            Access Features in Scriptly
-          </h2>
-          
-          <div className="space-y-8">
-            {/* Step 1 */}
-            <div className="animate-on-scroll">
-              <div className="flex items-start gap-4 mb-4">
-                <div className="w-8 h-8 bg-gradient-to-r from-purple-600 to-blue-600 rounded-full flex items-center justify-center flex-shrink-0">
-                  <span className="text-white font-bold">1</span>
-                </div>
-                <div className="flex-1">
-                  <h3 className="text-lg font-semibold text-purple-100 mb-2">Ask Scriptly in Rehearsal Mode</h3>
-                  <p className="text-purple-200 mb-4">Long press any line to access Ask Scriptly. The Ask Scriptly feature allows you to choose where you want to start practicing, use AI insights to analyze the line, and provides you with questions that helps you reflect on the line.</p>
-                  <div className="bg-gradient-to-r from-purple-600/10 to-blue-600/10 rounded-lg p-4 border border-purple-400/20">
-                    <img 
-                      src="/ask-scriptly-screenshot.png" 
-                      alt="Ask Scriptly feature screenshot showing script with AI assistant overlay" 
-                      className="w-full max-w-md mx-auto rounded-lg shadow-lg"
-                    />
-                    <p className="text-xs text-purple-300 text-center mt-2 italic">Screenshot: Ask Scriptly feature interface</p>
-                  </div>
-                </div>
-              </div>
-            </div>
-
-            {/* Step 2 */}
-            <div className="animate-on-scroll">
-              <div className="flex items-start gap-4 mb-4">
-                <div className="w-8 h-8 bg-gradient-to-r from-purple-600 to-blue-600 rounded-full flex items-center justify-center flex-shrink-0">
-                  <span className="text-white font-bold">2</span>
-                </div>
-                <div className="flex-1">
-                  <h3 className="text-lg font-semibold text-purple-100 mb-2">The Ellipsis Menu in Rehearsal Mode</h3>
-                  <p className="text-purple-200 mb-4">Tap the Ellipsis menu on the upper right hand corner in rehearsal mode to access menu settings. You can change the character you're rehearsing, change the voices for the scene, change where you can start and end practice lines, edit the script and its lines, hide stage directions, and toggle auto-loop on and off.</p>
-                  <div className="bg-gradient-to-r from-purple-600/10 to-blue-600/10 rounded-lg p-4 border border-purple-400/20">
-                    <img 
-                      src="/three-dot-menu.png" 
-                      alt="Ellipsis menu in rehearsal mode screenshot" 
-                      className="w-full max-w-md mx-auto rounded-lg shadow-lg"
-                    />
-                    <p className="text-xs text-purple-300 text-center mt-2 italic">Screenshot: Ellipsis menu interface</p>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
       {/* FAQ Section */}
       <section className="section-padding bg-gradient-to-r from-purple-600/5 to-blue-600/5">
         <div className="container-responsive max-w-4xl">
