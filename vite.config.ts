@@ -4,30 +4,34 @@ import path from "path";
 import { componentTagger } from "lovable-tagger";
 
 // https://vitejs.dev/config/
-export default defineConfig(({ mode }) => ({
-  server: {
+export default defineConfig(({ mode }) => {
+  const server = {
     host: "::",
     port: 8080,
-  },
-  plugins: [react(), mode === "development" && componentTagger()].filter(Boolean),
-  resolve: {
-    alias: {
-      "@": path.resolve(__dirname, "./src"),
+  };
+
+  return {
+    server,
+    plugins: [react(), mode === "development" && componentTagger()].filter(Boolean),
+    resolve: {
+      alias: {
+        "@": path.resolve(__dirname, "./src"),
+      },
     },
-  },
-  build: {
-    target: 'esnext',
-    minify: 'esbuild',
-    rollupOptions: {
-      output: {
-        manualChunks: {
-          vendor: ['react', 'react-dom'],
-          ui: ['@radix-ui/react-dialog', '@radix-ui/react-dropdown-menu', '@radix-ui/react-tooltip'],
+    build: {
+      target: "esnext",
+      minify: "esbuild",
+      rollupOptions: {
+        output: {
+          manualChunks: {
+            vendor: ["react", "react-dom"],
+            ui: ["@radix-ui/react-dialog", "@radix-ui/react-dropdown-menu", "@radix-ui/react-tooltip"],
+          },
         },
       },
     },
-  },
-  optimizeDeps: {
-    include: ['react', 'react-dom', 'lucide-react'],
-  },
-}));
+    optimizeDeps: {
+      include: ["react", "react-dom", "lucide-react"],
+    },
+  };
+});

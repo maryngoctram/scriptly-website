@@ -27,12 +27,6 @@ const RouteTracker = () => {
 };
 
 const App = () => {
-  // #region agent log
-  useEffect(() => {
-    fetch('http://127.0.0.1:7242/ingest/8e0415ed-d1b2-4aed-b2a0-78cf86b3b718',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({location:'App.tsx:27',message:'App component mounted',data:{url:window.location.href,pathname:window.location.pathname},timestamp:Date.now(),runId:'run1',hypothesisId:'A'})}).catch(()=>{});
-  }, []);
-  // #endregion
-  
   return (
     <QueryClientProvider client={queryClient}>
       <TooltipProvider>
